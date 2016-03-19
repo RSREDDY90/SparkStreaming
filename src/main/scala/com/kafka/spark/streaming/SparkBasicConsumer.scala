@@ -16,7 +16,7 @@ object SparkBasicConsumer {
     //val Array(zkQuorum, group, topics, numThreads) = args
     val zkQuorum = "localhost:2181"
     val group = "test-consumer-group"
-    val topicMap = Map("test" -> 2)
+    val topicMap = Map("sekhar" -> 2)
     val sparkConf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
     val ssc = new StreamingContext(sparkConf, Seconds(20))
     ssc.checkpoint("checkpoint")

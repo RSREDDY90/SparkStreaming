@@ -28,9 +28,9 @@ object ScalaProducer {
     val config = new ProducerConfig(props)
     val producer = new Producer[String, String](config)
     val t = System.currentTimeMillis()
-    val runtime = new Date().getTime();
+    val runtime = new Date();
 
-    val msg = runtime + "," + ", Hello1";
+    val msg = runtime + "," + ", Nice to See u";
     val data = new KeyedMessage[String, String](topic,"2", msg);
     producer.send(data);
     println("message sent key: " + "2" + " value is:" + msg)
